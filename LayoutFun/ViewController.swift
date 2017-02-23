@@ -31,11 +31,36 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func setupTheConstraints() {
-        // TODO: Create all the constraints (in code) for the various views
-        
-        
+        redView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        redView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        redView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.60).isActive = true
+        redView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.30).isActive = true
+
+      orangeView.bottomAnchor.constraint(equalTo: redView.topAnchor).isActive = true
+      orangeView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+      orangeView.widthAnchor.constraint(equalTo: redView.widthAnchor, multiplier: 0.75).isActive = true
+      orangeView.heightAnchor.constraint(equalTo: redView.heightAnchor, multiplier: 0.75).isActive = true
+
+      yellowView.bottomAnchor.constraint(equalTo: orangeView.topAnchor).isActive = true
+      yellowView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+      yellowView.widthAnchor.constraint(equalTo: orangeView.widthAnchor, multiplier: 0.75).isActive = true
+      yellowView.heightAnchor.constraint(equalTo: orangeView.heightAnchor, multiplier: 0.75).isActive = true
+
+      greenView.bottomAnchor.constraint(equalTo: yellowView.topAnchor).isActive = true
+      greenView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+      greenView.widthAnchor.constraint(equalTo: yellowView.widthAnchor, multiplier: 0.75).isActive = true
+      greenView.heightAnchor.constraint(equalTo: yellowView.heightAnchor, multiplier: 0.75).isActive = true
+
+      blueView.bottomAnchor.constraint(equalTo: greenView.topAnchor).isActive = true
+      blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+      blueView.widthAnchor.constraint(equalTo: greenView.widthAnchor, multiplier: 0.75).isActive = true
+      blueView.heightAnchor.constraint(equalTo: greenView.heightAnchor, multiplier: 0.75).isActive = true
+
+
+
+
     }
-    
+
     func turnOffAutoResizingOnAllViews() {
         [redView, orangeView, yellowView, greenView, blueView].forEach { colorView in
             colorView.translatesAutoresizingMaskIntoConstraints = false
